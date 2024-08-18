@@ -4,6 +4,7 @@ import Carousel from './assets/components/Carousel'
 import Lancamentos from './assets/components/Lancamentos'
 import Lanc from './assets/components/Lanc'
 import Seasons from './assets/components/Seasons.jsx'
+import SeasonsImgs from './assets/components/SeasonsImgs.jsx'
 
 
 //test
@@ -20,6 +21,7 @@ function App() {
     <Lancamentos></Lancamentos>
       <Lanc></Lanc>
       <Seasons></Seasons>
+      <SeasonsImgs></SeasonsImgs>
       
 
 
