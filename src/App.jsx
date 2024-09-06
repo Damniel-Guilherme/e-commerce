@@ -1,10 +1,8 @@
 import './App.css'
 import Header from './assets/components/Header'
 import Carousel from './assets/components/Carousel'
-import Lancamentos from './assets/components/Lancamentos'
-import Lanc from './assets/components/Lanc'
-import Seasons from './assets/components/Seasons.jsx'
-import SeasonsImgs from './assets/components/SeasonsImgs.jsx'
+import Collections from './assets/components/Collections'
+
 
 
 //test
@@ -15,18 +13,18 @@ function App() {
     <>
     <header>
       <Header></Header>
-      <Carousel></Carousel>
     </header>
+
     <main>
-    <Lancamentos></Lancamentos>
-      <Lanc></Lanc>
-      <Seasons></Seasons>
-      <SeasonsImgs></SeasonsImgs>
+    <Carousel></Carousel>
+    <Collections></Collections>
+
       
 
 
 
     </main>
+
     <footer>
 
 

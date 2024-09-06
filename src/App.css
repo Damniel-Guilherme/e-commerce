@@ -1,12 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
-    /* box-sizing: border-box;  */
 }
 
 body {
-    margin: 0;
     background-color: #ffffff;
+
+    /* @media only screen and (min-width: 1124px) {
+        margin: 0px 30px;
+    } */
 }
 
 header {
@@ -14,15 +16,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 5px;
 
     @media only screen and (min-width: 1124px) {
-        margin: 0px 30px;
+        padding: initial;
     }
 }
 
 main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }

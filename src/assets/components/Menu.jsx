@@ -6,7 +6,6 @@ const StyledDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
-  margin: 0 5px;
 `;
 
 const StyledBtn = styled.button`

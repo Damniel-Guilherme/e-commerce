@@ -20,6 +20,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: #f0f0f0;
   cursor: grab;
 
@@ -30,8 +31,13 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Garante que a imagem ocupe todo o espaço do container */
+  height: 300px;
+  object-fit: cover;
+
+  @media only screen and (min-width: 1024px){
+    height: auto;
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço do container */
+  }
 `;
 
 const PrevArrow = styled.div`

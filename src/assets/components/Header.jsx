@@ -12,24 +12,19 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   margin:  10px 0px;
   color: #000000;
-  
-
-
 
   @media only screen and (min-width: 1124px) {
     margin: 0 0px;
     height: 100px;
    
-
     .menu {
       order: 2;
-      
     }
     .logo {
       order: 1;
       
     }
-    .test {
+    .DisplayNone {
       display: none;
     }
   }
@@ -39,7 +34,6 @@ const MenuWrapper = styled.div`
   order: 1;
 
   @media only screen and (min-width: 1124px) {
-
     order: 2;
   }
 `;
@@ -48,20 +42,17 @@ const LogoWrapper = styled.div`
   order: 2;
 
   @media only screen and (min-width: 1124px) {
-
     order: 1;
   }
 `;
 
 const ContainerCardsWrapper = styled.div`
-  margin: 0 5px;
   order: 3;
 
   @media only screen and (min-width: 1124px) {
     order: 3;
   }
 `;
-
 
 const ContainerMenuLogo = styled.div`
   display: flex;
@@ -77,7 +68,6 @@ const ContainerMenuLogo = styled.div`
 const ContainerMenuLogoDesk = styled.div`
  display: none;
 
-
   @media only screen and (min-width: 1124px) {
     display: flex;
     align-items: center;
@@ -85,37 +75,32 @@ const ContainerMenuLogoDesk = styled.div`
   }
 `
 
-
 function Header() {
   return (
     <HeaderContainer>
       <ContainerMenuLogoDesk>
-                    <MenuWrapper>
-                      <Menu/>
-                    </MenuWrapper>
 
-                      <LogoWrapper>
-                        <Logo />
-                      </LogoWrapper>
+        <MenuWrapper>
+          <Menu/>
+        </MenuWrapper>
 
-        </ContainerMenuLogoDesk>
+        <LogoWrapper>
+          <Logo />
+        </LogoWrapper>
 
-  
+      </ContainerMenuLogoDesk>
 
-                      <MenuWrapper className='test'>
-                        <Menu />
-                      </MenuWrapper>
+      <MenuWrapper className='DisplayNone'>
+        <Menu />
+      </MenuWrapper>
 
-                      <LogoWrapper className='test'>
-                        <Logo />
-                      </LogoWrapper>
+      <LogoWrapper className='DisplayNone'>
+        <Logo />
+      </LogoWrapper>
 
-
-
-
-        <ContainerCardsWrapper>
-          <ContainerCards />
-        </ContainerCardsWrapper>
+      <ContainerCardsWrapper>
+        <ContainerCards />
+      </ContainerCardsWrapper>
     </HeaderContainer>
   );
 }
