@@ -5,76 +5,70 @@ import { ImgsCollections } from './ImgsCollections.jsx';
 const Div = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-    height: 120px;
-    background-color: #ff0000;
+    height: auto;
+ 
+
 
     @media only screen and (min-width: 1124px) {
-        background-color: black;
+
         height: 350px;
+        gap: 20px;
     }
 `;
 
-const CardsD = styled.div`
+const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    margin: 0 10px;
-    width: 17%;
-    height: 90%;
-    background-color: blue;
+    justify-content: flex-start;
+    width: 25%;
+    height: 120px;
+
     color: white;
     text-align: center;
+    padding: 10px;
+
+    @media only screen and (min-width: 1124px) {
+        width: 14%;
+        height: 90%;
+    }
 `;
 
-const CardsDText = styled.p`
-    font-size: 20px;
+const CardText = styled.p`
+    font-size: 16px;
+
+    @media only screen and (min-width: 1124px) {
+        font-size: 20px;
+    }
 `;
 
-const CardsImgs = styled.img`
+const CardImage = styled.img`
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: contain;
 `;
 
 const CollectionsCard = () => {
     const Categorias = [
-        {
-            Categoria: "Camisetas",
-            Imagem: ImgsCollections.Camisetas,
-        },
-        {
-            Categoria: "Moletons",
-            Imagem: ImgsCollections.Moletons,
-        },
-        {
-            Categoria: "Calças",
-            Imagem: ImgsCollections.Calças,
-        },
-        {
-            Categoria: "Bermudas",
-            Imagem: ImgsCollections.Bermudas,
-        },
-        {
-            Categoria: "Kits",
-            Imagem: ImgsCollections.Kits,
-        },
-        {
-            Categoria: "News",
-            Imagem: ImgsCollections.News,
-        },
+        { Categoria: "Camisetas", Imagem: ImgsCollections.Camisetas },
+        { Categoria: "Moletons", Imagem: ImgsCollections.Moletons },
+        { Categoria: "Calças", Imagem: ImgsCollections.Calças },
+        { Categoria: "Bermudas", Imagem: ImgsCollections.Bermudas },
+        { Categoria: "Kits", Imagem: ImgsCollections.Kits },
+        { Categoria: "News", Imagem: ImgsCollections.News },
     ];
 
     return (
         <Div>
             {Categorias.map((categoria, index) => (
-                <CardsD key={index}>
-                    <CardsDText>{categoria.Categoria}</CardsDText>
-                    <CardsImgs src={categoria.Imagem} alt={categoria.Categoria} />
-                </CardsD>
+                <Card key={index}>
+                    <CardText>{categoria.Categoria}</CardText>
+                    <CardImage src={categoria.Imagem} alt={categoria.Categoria} />
+                </Card>
             ))}
         </Div>
     );
