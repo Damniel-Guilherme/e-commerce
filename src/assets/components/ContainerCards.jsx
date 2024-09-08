@@ -12,8 +12,6 @@ const StyledContainer = styled.div`
 
   @media only screen and (min-width: 1024px) {
     justify-content: end;
-
-
   }
 
   @media only screen and (max-width: 1124px) {
