@@ -2,6 +2,7 @@ import './App.css'
 import Header from './assets/components/Header'
 import Carousel from './assets/components/Carousel'
 import Collections from './assets/components/Collections'
+import Roupas from './assets/components/Roupas'
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <main>
     <Carousel></Carousel>
     <Collections></Collections>
+    <Roupas></Roupas>
 
       
 

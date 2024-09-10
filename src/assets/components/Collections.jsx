@@ -14,13 +14,14 @@ const LancamentosContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: #00000020;
+  background-color: #00000029;
   margin-top: 30px;
 `;
 
 const Title = styled.h1`
   width: 1920px;
   margin-left: 10px;
+  padding: 20px 0;
   color: #000000;
   font-size: 25px;
   text-align: start;

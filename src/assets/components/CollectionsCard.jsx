@@ -40,7 +40,8 @@ const Card = styled.div`
 
 const CardText = styled.p`
     font-size: 16px;
-
+    color: black;
+    font-weight: bold;
     @media only screen and (min-width: 1124px) {
         font-size: 20px;
     }

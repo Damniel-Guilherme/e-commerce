@@ -5,13 +5,26 @@ import axios from 'axios';
 import Cor from './Cor';
 import Tamanhos from './Tamanhos';
 
-const Container = styled.div`
+
+const Container = styled.div `
+  margin-top: 20px;
+
+`
+
+const Titulo = styled.h1`
+  font-size: 30px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  color: black;
+`
+
+const ContainerRoupas = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  padding: 0px 30px;
+
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 20px auto;
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
@@ -25,6 +38,7 @@ const Container = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
 
 const GridItem = styled.div`
   display: flex;
@@ -101,13 +115,13 @@ const GhostItem = styled(GridItem)`
   visibility: hidden;
 `;
 
-const Lanc = () => {
+const Roupas = () => {
   const [roupas, setRoupas] = useState([]);
 
   useEffect(() => {
     const fetchRoupas = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/services');
+        const response = await axios.get('https://node-js-api-ecommerce.vercel.app/api/services');
         const updatedRoupas = response.data.map(roupa => ({
           ...roupa,
           image_path: `http://localhost:3000/${roupa.image_path.replace(/\\/g, '/')}`
@@ -129,6 +143,11 @@ const Lanc = () => {
 
   return (
     <Container>
+      <div>
+        <Titulo>Roupas</Titulo>
+      </div>
+
+      <ContainerRoupas>
       {roupas.map((roupa) => (
         <GridItem key={roupa._id}>
           <ImageWrapper>
@@ -151,8 +170,12 @@ const Lanc = () => {
       {getGhostItems().map((_, index) => (
         <GhostItem key={`ghost-${index}`} />
       ))}
+    </ContainerRoupas>
+
+    
     </Container>
+    
   );
 };
 
-export default Lanc;
+export default Roupas;
