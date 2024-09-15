@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from './Logo';
+import NavLogo from './NavLogo';
 import Menu from './Menu';
 import ContainerCards from './ContainerCards';
 
@@ -85,7 +85,7 @@ function Header() {
         </MenuWrapper>
 
         <LogoWrapper>
-          <Logo />
+          <NavLogo/>
         </LogoWrapper>
 
       </ContainerMenuLogoDesk>
@@ -95,7 +95,7 @@ function Header() {
       </MenuWrapper>
 
       <LogoWrapper className='DisplayNone'>
-        <Logo />
+        <NavLogo />
       </LogoWrapper>
 
       <ContainerCardsWrapper>

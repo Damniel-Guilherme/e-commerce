@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from '../fonts/GlobalStyle';
 
 const StyledDiv = styled.div`
   display: flex;

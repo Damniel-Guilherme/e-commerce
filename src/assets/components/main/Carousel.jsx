@@ -6,8 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Importar as imagens do carrossel
-import img1 from '../imgs/slide-1.jpg';
-import img2 from '../imgs/slide-2.jpg';
+import img1 from '../../imgs/carousel/slide-1.jpg';
+import img2 from '../../imgs/carousel/slide-2.jpg';
 
 const CarouselContainer = styled.div`
   width: 100%;

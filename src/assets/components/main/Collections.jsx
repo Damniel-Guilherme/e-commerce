@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import CollectionsCard from './CollectionsCard';
 
 // Estilos globais
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from '../fonts/GlobalStyle';
 
 const LancamentosContainer = styled.div`
 
@@ -27,6 +27,8 @@ const Title = styled.h1`
   text-align: start;
  font-family: 'Roboto', sans-serif;  // Adiciona a fonte Roboto ao título
 
+
+ 
  @media only screen and (min-width: 1124px) {
     font-size: 25px;
     margin-left: 40px;

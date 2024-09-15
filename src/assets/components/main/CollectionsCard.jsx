@@ -5,18 +5,17 @@ import { ImgsCollections } from './ImgsCollections.jsx';
 const Div = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
     width: 100%;
-    height: auto;
+    padding: 10px 0;
+    gap: 10px;
+
+    background-color: red;
  
-
-
     @media only screen and (min-width: 1124px) {
-
-        height: 350px;
-        gap: 20px;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 `;
 
@@ -25,16 +24,19 @@ const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 25%;
-    height: 120px;
+    width: 30%;
 
+    max-width: 300px;
+    background-color: red;
     color: white;
     text-align: center;
-    padding: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+
 
     @media only screen and (min-width: 1124px) {
-        width: 14%;
-        height: 90%;
+        background-color: blue;
+        gap: 0px;
     }
 `;
 
@@ -42,6 +44,7 @@ const CardText = styled.p`
     font-size: 16px;
     color: black;
     font-weight: bold;
+
     @media only screen and (min-width: 1124px) {
         font-size: 20px;
     }
@@ -49,14 +52,14 @@ const CardText = styled.p`
 
 const CardImage = styled.img`
     width: 100%;
-    height: 80%;
     object-fit: contain;
+    border: solid 1px black;
 `;
 
 const CollectionsCard = () => {
     const Categorias = [
         { Categoria: "Camisetas", Imagem: ImgsCollections.Camisetas },
-        { Categoria: "Moletons", Imagem: ImgsCollections.Moletons },
+        { Categoria: "Blusas", Imagem: ImgsCollections.Blusas },
         { Categoria: "Calças", Imagem: ImgsCollections.Calças },
         { Categoria: "Bermudas", Imagem: ImgsCollections.Bermudas },
         { Categoria: "Kits", Imagem: ImgsCollections.Kits },

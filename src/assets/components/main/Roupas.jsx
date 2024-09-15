@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-
 import Cor from './Cor';
 import Tamanhos from './Tamanhos';
-
+import TitleSections from './TitleSections';
 
 const Container = styled.div `
   margin-top: 20px;
@@ -144,14 +143,16 @@ const Roupas = () => {
   return (
     <Container>
       <div>
-        <Titulo>Roupas</Titulo>
+        <Titulo>Roupasdasdasdsa</Titulo> 
       </div>
+      <TitleSections title='Roupas'></TitleSections>
 
       <ContainerRoupas>
       {roupas.map((roupa) => (
         <GridItem key={roupa._id}>
           <ImageWrapper>
             <Title>{roupa.title}</Title>
+            {/* roupas.kit provisorio / corrigir o image_path ! */}
             <Image src={roupa.kit} alt={roupa.description} />
             <Overlay>
               <Text>{roupa.title}</Text>

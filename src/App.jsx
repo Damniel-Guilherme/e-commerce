@@ -1,12 +1,10 @@
 import './App.css'
-import Header from './assets/components/Header'
-import Carousel from './assets/components/Carousel'
-import Collections from './assets/components/Collections'
-import Roupas from './assets/components/Roupas'
+import Header from './assets/components/header/Header'
+import Carousel from './assets/components/main/Carousel'
+import Collections from './assets/components/main/Collections'
+import Roupas from './assets/components/main/Roupas'
 
 
-
-//test
 
 function App() {
 
