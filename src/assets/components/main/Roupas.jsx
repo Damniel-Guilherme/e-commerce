@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Cor from './Cor';
 import Tamanhos from './Tamanhos';
+
 import TitleSections from './TitleSections';
+
 
 const Container = styled.div `
   margin-top: 20px;
@@ -142,10 +144,8 @@ const Roupas = () => {
 
   return (
     <Container>
-      <div>
-        <Titulo>Roupasdasdasdsa</Titulo> 
-      </div>
-      <TitleSections title='Roupas'></TitleSections>
+      
+      <TitleSections title='Collections' ></TitleSections>
 
       <ContainerRoupas>
       {roupas.map((roupa) => (
